@@ -218,12 +218,33 @@ body, .video-timer, .video-controls, .options {
     100% { transform: scale(1.02); }
 }
 
-.video-title {
-    font-size: 2em;
-    text-align: center;
-    margin: 5px 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(45deg, #FF9800, #2196F3); /* تدرج من البرتقالي إلى الأزرق السماوي */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+h1 {
+    font-size: 5em; /* حجم كبير لتقليد الشعار */
+    font-weight: bold; /* سماكة الخط */
+    color: #FFD700; /* اللون الأصفر الذهبي */
+    text-shadow:
+        -2px -2px 0px #FF0000,   /* ظل أحمر */
+        2px -2px 0px #FF0000,    /* ظل أحمر */
+        -2px 2px 0px #FF0000,    /* ظل أحمر */
+        2px 2px 0px #FF0000,     /* ظل أحمر */
+        5px 5px 10px rgba(0, 0, 0, 0.8); /* ظل أسود ثلاثي الأبعاد */
+    letter-spacing: 2px; /* مسافات بين الحروف لتعزيز تأثير الشعار */
+    text-transform: uppercase; /* تحويل النص إلى أحرف كبيرة */
+    font-family: 'Arial Black', sans-serif; /* خط عريض مشابه للشعار */
+    position: relative; /* للتمكن من إضافة تأثيرات إضافية لاحقًا */
 }
+
+h1::after {
+    content: "Z"; /* إضافة الحرف Z الشهير في شعار Dragon Ball Z */
+    position: absolute;
+    right: -40px;
+    bottom: -10px;
+    font-size: 1.5em;
+    color: #FF0000; /* اللون الأحمر للحرف Z */
+    text-shadow: 
+        -1px -1px 0px #FFD700, 
+        1px -1px 0px #FFD700, 
+        -1px 1px 0px #FFD700, 
+        1px 1px 0px #FFD700;
+}
+
