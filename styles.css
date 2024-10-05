@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #FF9800, #FF4081); /* برتقالي إلى وردي */}
+body, .video-timer, .video-controls, .options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    width: 98%;
+    max-width: 900px;
+    background: #003DA5; /* لون أزرق غامق */
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.container.fullscreen {
+    max-width: 100%;
+    width: 100%;
+}
+.wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -15px;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.9s ease;
+}
+.container.show-controls .wrapper {
+    bottom: 0px;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.15s ease;
+}
+.wrapper::before {
+    content: "";
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    position: absolute;   
+    background: linear-gradient(to top, rgba(0, 61, 165, 0.7), transparent); /* لون أزرق */
+    height: calc(100% + 50px);
+}
+.video-timeline {
+    height: 7px;
+    width: 100%;
+    cursor: pointer;
+}
+.video-timeline .progress-area {
+    height: 3px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.6);
+}
+.progress-area .progress-bar {
+    position: relative;
+    width: 0%;
+    height: 100%;
+    transition: all 0.5s ease; /* تأثير تلاشي */
+
+    background: #FF4081; /* لون وردي */
+}
+.progress-area span {
+    position: absolute;
+    left: 50%;
+    top: -25px;
+    font-size: 14px;
+    color: #fff;
+    transform: translateX(-50%);
+}
+.progress-area .progress-bar::before {
+    content: "";
+    top: 50%;
+    right: 0;
+    height: 13px;
+    width: 13px;
+    background: inherit;
+    position: absolute;
+    transition: all 0.5s ease; /* تأثير تلاشي */
+
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+.progress-area span, .progress-area .progress-bar::before {
+    display: none;
+}
+.video-timeline:hover .progress-area span, 
+.video-timeline:hover .progress-area .progress-bar::before {
+    display: block;
+}
+.video-controls .options {
+    width: 100%;
+}
+.video-controls .options:first-child {
+    justify-content: flex-start;
+}
+.video-controls .options:last-child {
+    justify-content: flex-end;
+}
+.video-controls {
+    padding: 5px 20px 10px;
+}
+.options button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border: none;
+    color: #fff;
+    background: none;
+    font-size: 19px;
+    transition: all 0.7s ease;
+}
+.options button:hover{
+    color: #FFBB33;
+}
+.options button :where(i, span) {
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+}
+.options input {
+    height: 5px;
+    max-width: 75px;
+    /* accent-color: #FF4081; وردي */
+}
+.options .video-timer {
+    font-size: 15px;
+    color: #efefef;
+    margin-left: 15px;
+}
+.video-timer .seprator {
+    font-size: 16px;
+    margin: 0 5px;
+    font-family: "Open sans";
+}
+.playback-content {
+    position: relative;
+}
+.playback-content .speed-options {
+    position: absolute;
+    bottom: 40px;
+    left: -40px;
+    width: 100px;
+    opacity: 0;
+    pointer-events: none;
+    list-style: none;
+    background: #fff;
+    border-radius: 5px;
+    transition: opacity 0.15s ease;
+}
+.playback-content .speed-options.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+.speed-options li {
+    cursor: pointer;
+    font-size: 15px;
+    padding: 5px 0 5px 15px;
+}
+.speed-options li.active {
+    color: #fff;
+    background: #FF4081; /* لون وردي */
+}
+.container video {
+    width: 100%;
+    /* border-radius: 10px; حواف مستديرة */
+    /* animation: scale-animation 1.5s ease infinite alternate; تأثير انسيابي للفيديو */
+}
+
+@keyframes scale-animation {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.02); } /* تأثير تكبير طفيف */
+}
