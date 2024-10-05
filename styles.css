@@ -219,7 +219,7 @@ body, .video-timer, .video-controls, .options {
 }
 
 h1{
-    font-size: 1.5rem; /* تقليل حجم الخط */
+    font-size: 2.1rem; /* تقليل حجم الخط */
     font-weight: bold; /* سماكة الخط */
     text-align: center;
     color: #FFD700; /* اللون الأصفر الذهبي */
@@ -232,7 +232,7 @@ h1{
 }
 
 h1 span{
-    font-size: 1.5rem; /* تصغير حجم الحرف Z */
+    font-size: 2.1rem; /* تصغير حجم الحرف Z */
     color: #FF0000; /* اللون الأحمر للحرف Z */
     text-shadow: 
         -1px -1px 0px #FFD700, 
