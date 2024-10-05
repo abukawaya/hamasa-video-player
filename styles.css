@@ -20,7 +20,7 @@ body, .video-timer, .video-controls, .options {
 .container {
     width: 98%;
     max-width: 900px;
-    background: #003DA5; /* لون أزرق غامق */
+    background: #003DA5; 
     border-radius: 5px;
     overflow: hidden;
     position: relative;
@@ -46,12 +46,12 @@ body, .video-timer, .video-controls, .options {
     transition: all 0.15s ease;
 }
 .wrapper::before {
-    content: "";
+    /* content: ""; */
     bottom: 0;
     width: 100%;
     z-index: -1;
     position: absolute;   
-    background: linear-gradient(to top, rgba(0, 61, 165, 0.7), transparent); /* لون أزرق */
+    /* background: linear-gradient(to top, rgba(0, 61, 165, 0.7), transparent); لون أزرق */
     height: calc(100% + 50px);
 }
 .video-timeline {
@@ -182,4 +182,15 @@ body, .video-timer, .video-controls, .options {
 @keyframes scale-animation {
     0% { transform: scale(1); }
     100% { transform: scale(1.02); } /* تأثير تكبير طفيف */
+}
+
+.video-title {
+    font-size: 2em; /* حجم الخط */
+    text-align: center; /* محاذاة النص إلى المنتصف */
+    margin: 5px 0; /* مسافة فوق وتحت العنوان */
+    font-family: 'Arial', sans-serif; /* نوع الخط */
+    background: linear-gradient(45deg, #ffcc00, #FF4081); /* تدرج لوني من الأصفر إلى الوردي */
+    -webkit-background-clip: text; /* قص الخلفية لتظهر على النص */
+    -webkit-text-fill-color: transparent; /* جعل لون النص شفاف لتظهر الخلفية */
+    
 }
