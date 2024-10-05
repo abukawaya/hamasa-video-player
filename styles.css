@@ -234,11 +234,7 @@ h1 {
     position: relative; /* للتمكن من إضافة تأثيرات إضافية لاحقًا */
 }
 
-h1::after {
-    content: "Z"; /* إضافة الحرف Z الشهير في شعار Dragon Ball Z */
-    position: absolute;
-    right: -30px; /* تم تعديل المسافة ليناسب حجم النص */
-    bottom: -5px; /* تعديل موضع الحرف Z */
+h1 span{
     font-size: 1.3em; /* تصغير حجم الحرف Z */
     color: #FF0000; /* اللون الأحمر للحرف Z */
     text-shadow: 
