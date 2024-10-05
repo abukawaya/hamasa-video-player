@@ -11,7 +11,8 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #FF9800, #FF4081); /* برتقالي إلى وردي */}
+    background: linear-gradient(135deg, #FF0000, #FFCC00); /* أحمر إلى أصفر */
+}
 body, .video-timer, .video-controls, .options {
     display: flex;
     align-items: center;
@@ -70,7 +71,7 @@ body, .video-timer, .video-controls, .options {
     height: 100%;
     transition: all 0.5s ease; /* تأثير تلاشي */
 
-    background: #FF4081; /* لون وردي */
+    background: #FF0000; /* أحمر */
 }
 .progress-area span {
     position: absolute;
@@ -123,7 +124,7 @@ body, .video-timer, .video-controls, .options {
     transition: all 0.7s ease;
 }
 .options button:hover{
-    color: #FFBB33;
+    color: #FFCC00; /* أصفر */
 }
 .options button :where(i, span) {
     width: 100%;
@@ -133,7 +134,7 @@ body, .video-timer, .video-controls, .options {
 .options input {
     height: 5px;
     max-width: 75px;
-    /* accent-color: #FF4081; وردي */
+    /* accent-color: #FF0000; أحمر */
 }
 .options .video-timer {
     font-size: 15px;
@@ -171,7 +172,7 @@ body, .video-timer, .video-controls, .options {
 }
 .speed-options li.active {
     color: #fff;
-    background: #FF4081; /* لون وردي */
+    background: #FF0000; /* أحمر */
 }
 .container video {
     width: 100%;
@@ -189,8 +190,7 @@ body, .video-timer, .video-controls, .options {
     text-align: center; /* محاذاة النص إلى المنتصف */
     margin: 5px 0; /* مسافة فوق وتحت العنوان */
     font-family: 'Arial', sans-serif; /* نوع الخط */
-    background: linear-gradient(45deg, #ffcc00, #FF4081); /* تدرج لوني من الأصفر إلى الوردي */
+    background: linear-gradient(45deg, #FFCC00, #FF0000); /* تدرج لوني من الأصفر إلى الأحمر */
     -webkit-background-clip: text; /* قص الخلفية لتظهر على النص */
     -webkit-text-fill-color: transparent; /* جعل لون النص شفاف لتظهر الخلفية */
-    
 }
