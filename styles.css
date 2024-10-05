@@ -73,7 +73,7 @@ body, .video-timer, .video-controls, .options {
 .video-timeline .progress-area {
     height: 3px;
     position: relative;
-    background: rgba(255, 152, 0, 0.6); /* برتقالي مع شفافية */
+    background: rgba(33, 150, 243, 0.6); /* أزرق سماوي مع شفافية */
 }
 
 .progress-area .progress-bar {
@@ -81,7 +81,7 @@ body, .video-timer, .video-controls, .options {
     width: 0%;
     height: 100%;
     transition: all 0.5s ease;
-    background: #FFC107; /* برتقالي فاتح */
+    background: #2196F3; /* أزرق سماوي */
 }
 
 .progress-area span {
@@ -143,7 +143,7 @@ body, .video-timer, .video-controls, .options {
     transition: all 0.7s ease;
 }
 
-.options button:hover{
+.options button:hover {
     color: #FFC107; /* برتقالي فاتح عند التمرير */
 }
 
@@ -218,8 +218,7 @@ body, .video-timer, .video-controls, .options {
     100% { transform: scale(1.02); }
 }
 
-/* تعديل h1 */
-h1{
+h1 {
     font-size: 2.5em; /* تقليل حجم الخط */
     font-weight: bold; /* سماكة الخط */
     opacity: 0;
@@ -229,12 +228,10 @@ h1{
     text-shadow:
         -2px -2px 0px #FF0000,   /* ظل أحمر */
         2px -2px 0px #FF0000,    /* ظل أحمر */
-        -2px 2px 0px #FF0000,    /* ظل أحمر */
-        2px 2px 0px #FF0000;     /* ظل أحمر */
-    transition: opacity 0.5s ease, pointer-events 0.5s ease; /* إضافة انتقال سلس */
+        -2px 2px 0px #FF0000;    /* ظل أحمر */
 }
 
-h1 span{
+h1 span {
     font-size: 1.3em; /* تصغير حجم الحرف Z */
     color: #FF0000; /* اللون الأحمر للحرف Z */
     text-shadow: 
@@ -244,8 +241,7 @@ h1 span{
         1px 1px 0px #FFD700;
 }
 
-/* إظهار العنوان عند وجود الصنف show-controls */
-.container.show-controls h1 {
+h1.show-controls span {
     opacity: 1;
     pointer-events: auto;
 }
