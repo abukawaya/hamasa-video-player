@@ -243,6 +243,3 @@ h1 span{
         -1px 1px 0px #FFD700, 
         1px 1px 0px #FFD700;
 }
-h1.show-controls span {
-    visibility:visible;
-}
