@@ -18,7 +18,7 @@ const container = document.querySelector(".container"),
      if(!mainVideo.paused) return;
      timer = setTimeout(()=>{
      container.classList.remove("show-controls");
-    } , 3000)
+    } , 2500)
 }
 container.addEventListener("mousemove" ,() =>{
     container.classList.add("show-controls");
