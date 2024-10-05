@@ -218,20 +218,23 @@ body, .video-timer, .video-controls, .options {
     100% { transform: scale(1.02); }
 }
 
-h1 {
+h1{
     font-size: 2.5em; /* تقليل حجم الخط */
     font-weight: bold; /* سماكة الخط */
     opacity: 0;
     pointer-events: none;
     text-align: center;
+    visibility:hidden;
     color: #FFD700; /* اللون الأصفر الذهبي */
     text-shadow:
         -2px -2px 0px #FF0000,   /* ظل أحمر */
         2px -2px 0px #FF0000,    /* ظل أحمر */
-        -2px 2px 0px #FF0000;    /* ظل أحمر */
+        -2px 2px 0px #FF0000,    /* ظل أحمر */
+        2px 2px 0px #FF0000;     /* ظل أحمر */
+    transition: opacity 0.5s ease, pointer-events 0.5s ease; /* إضافة انتقال سلس */
 }
 
-h1 span {
+h1 span{
     font-size: 1.3em; /* تصغير حجم الحرف Z */
     color: #FF0000; /* اللون الأحمر للحرف Z */
     text-shadow: 
@@ -240,8 +243,6 @@ h1 span {
         -1px 1px 0px #FFD700, 
         1px 1px 0px #FFD700;
 }
-
 h1.show-controls span {
-    opacity: 1;
-    pointer-events: auto;
+    visibility:visible;
 }
