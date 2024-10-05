@@ -218,13 +218,13 @@ body, .video-timer, .video-controls, .options {
     100% { transform: scale(1.02); }
 }
 
-h1{
+.video-title h1{
     font-size: 2.5em; /* تقليل حجم الخط */
     font-weight: bold; /* سماكة الخط */
     opacity: 0;
     pointer-events: none;
     text-align: center;
-    visibility:hidden;
+/*     visibility:hidden; */
     color: #FFD700; /* اللون الأصفر الذهبي */
     text-shadow:
         -2px -2px 0px #FF0000,   /* ظل أحمر */
